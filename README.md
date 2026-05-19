@@ -13,7 +13,6 @@
 - Data handling: [src/data_loader.py](src/data_loader.py)
 - Task A agent (user simulation): [src/task_a_agent.py](src/task_a_agent.py)
 - Task B agent (recommendation): [src/task_b_agent.py](src/task_b_agent.py)
-- Example CLI pipeline: [test_pipeline.py](test_pipeline.py)
 - Example env template: [.env.example](.env.example)
 - Docker: [Dockerfile](Dockerfile), [docker-compose.yml](docker-compose.yml)
 
