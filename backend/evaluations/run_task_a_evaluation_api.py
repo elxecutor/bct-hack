@@ -1,4 +1,5 @@
 import os
+import json
 from math import sqrt
 
 import numpy as np
@@ -9,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
-DATA_PATH = os.getenv("DATA_PATH", "data/movies_sample.csv")
+DATA_PATH = os.getenv("DATA_PATH", "../data/movies_sample.csv")
 SAMPLE_SIZE = int(os.getenv("TASK_A_SAMPLE_SIZE", "10"))
 TIMEOUT_SECONDS = int(os.getenv("TASK_A_REQUEST_TIMEOUT", "120"))
 
@@ -61,6 +62,10 @@ def run_task_a_endpoint_evaluation():
     text_similarities = []
     processed_rows = []
 
+    # Open raw outputs file to capture full model responses per case
+    raw_output_path = "task_a_raw_outputs.jsonl"
+    raw_f = open(raw_output_path, "w", encoding="utf-8")
+
     print(f"🤖 Evaluating Task A endpoint on {len(eval_sample)} rows against {API_URL}...\n")
 
     for _, row in eval_sample.iterrows():
@@ -71,6 +76,18 @@ def run_task_a_endpoint_evaluation():
 
         try:
             output = call_simulate_api(user_id, product_id)
+            # Persist the raw model output with the input case for reproducibility
+            record = {
+                "input_case": {
+                    "userId": user_id,
+                    "productId": product_id,
+                    "actual_score": actual_score,
+                    "actual_text": actual_text,
+                },
+                "model_response": output,
+            }
+            raw_f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
             pred_score = float(output.get("score", 3.0))
             pred_text = output.get("text", "")
 
@@ -88,6 +105,9 @@ def run_task_a_endpoint_evaluation():
         except Exception as exc:
             print(f"❌ Error processing row (user={user_id}, product={product_id}): {exc}\n")
             continue
+
+    # close raw outputs file
+    raw_f.close()
 
     if actual_ratings:
         final_rmse = calculate_rmse(actual_ratings, predicted_ratings)

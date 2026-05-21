@@ -1,4 +1,5 @@
 import os
+import json
 import time
 from collections import OrderedDict
 
@@ -10,7 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
-DATA_PATH = os.getenv("DATA_PATH", "data/movies_sample.csv")
+DATA_PATH = os.getenv("DATA_PATH", "../data/movies_sample.csv")
 SAMPLE_SIZE = int(os.getenv("TASK_B_SAMPLE_SIZE", "10"))
 TIMEOUT_SECONDS = int(os.getenv("TASK_B_REQUEST_TIMEOUT", "120"))
 
@@ -82,6 +83,10 @@ def run_task_b_endpoint_evaluation():
     hit_rates = []
     processed_users = []
 
+    # Open raw outputs file to capture full model responses per user
+    raw_output_path = "task_b_raw_outputs.jsonl"
+    raw_f = open(raw_output_path, "w", encoding="utf-8")
+
     print(f"🤖 Evaluating Task B endpoint on {len(sampled_users)} users against {API_URL}...\n")
 
     for user_id in sampled_users:
@@ -93,6 +98,14 @@ def run_task_b_endpoint_evaluation():
         try:
             started_at = time.time()
             output = call_recommend_api(user_id)
+            # Save the raw model response with the input case
+            record = {
+                "input_case": {"userId": user_id, "relevant_products": list(relevant_products)},
+                "model_response": output,
+                "meta": {"latency_seconds": time.time() - started_at},
+            }
+            raw_f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
             elapsed = time.time() - started_at
 
             recommendations = output.get("recommendations", [])
@@ -116,6 +129,9 @@ def run_task_b_endpoint_evaluation():
         except Exception as exc:
             print(f"❌ Error processing user {user_id}: {exc}\n")
             continue
+
+    # close raw outputs file
+    raw_f.close()
 
     if ndcg_scores:
         final_ndcg = float(np.mean(ndcg_scores))
