@@ -1,0 +1,64 @@
+{
+  "CT-003-CHIDI": [
+    {
+      "productId": "A-201",
+      "title": "The Dark Knight",
+      "score": 5,
+      "summary": "The ultimate action movie!",
+      "text": "Omo, this is how you make a movie. The Joker was intense, but Batman's gadgets and the car chases? 10/10. No dull moment at all."
+    },
+    {
+      "productId": "N-101",
+      "title": "King of Boys",
+      "score": 5,
+      "summary": "Power and Action!",
+      "text": "Eniola Salami is a beast! The tension in this movie is better than most Hollywood films. I love a strong lead who knows how to take charge."
+    },
+    {
+      "productId": "A-202",
+      "title": "The Matrix",
+      "score": 4,
+      "summary": "Mind-bending fights",
+      "text": "The bullet-time effects are still the best ever. My only issue is the talking was a bit much, just give me more kung-fu!"
+    },
+    {
+      "productId": "N-201",
+      "title": "Brotherhood",
+      "score": 5,
+      "summary": "Top tier Nigerian Action",
+      "text": "The heist scenes were clean! It’s great to see a Nigerian movie with this much adrenaline. More of this, please!"
+    }
+  ],
+  "CT-001-KUNLE": [
+    {
+      "productId": "B001",
+      "title": "The Black Book",
+      "score": 5,
+      "summary": "Nollywood has arrived!",
+      "text": "The pacing was world-class. A gritty, dark story that shows we can do thrillers right."
+    },
+    {
+      "productId": "B002",
+      "title": "Inception",
+      "score": 4,
+      "summary": "Mind-blowing",
+      "text": "Deeply intellectual. Reminds me of why I love complex storytelling."
+    }
+  ],
+  "CT-002-SARAH": [
+    {
+      "productId": "S001",
+      "title": "Interstellar",
+      "score": 5,
+      "summary": "Masterpiece",
+      "text": "The physics, the music, the emotion. This is what sci-fi should be."
+    },
+    {
+      "productId": "S002",
+      "title": "Contact",
+      "score": 4,
+      "summary": "Solid realism",
+      "text": "A bit slow but the scientific groundedness is appreciated."
+    }
+  ]
+}
