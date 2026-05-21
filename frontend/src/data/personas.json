@@ -1,0 +1,23 @@
+[
+  {
+    "userId": "CT-001-KUNLE",
+    "profileName": "Kunle 'The Cinephile' Ade",
+    "archetype": "The Nollywood Critic",
+    "stats": { "reviews": 10, "avgRating": 4.5, "since": 2018 },
+    "voiceSnippet": "Omo, if the cinematography isn't crisp, I'm out! I love a story with depth."
+  },
+  {
+    "userId": "CT-002-SARAH",
+    "profileName": "Sarah J. Miller",
+    "archetype": "The Sci-Fi Purist",
+    "stats": { "reviews": 12, "avgRating": 3.2, "since": 2012 },
+    "voiceSnippet": "Looking for scientific accuracy and mind-bending plots. Not a fan of clichés."
+  },
+  {
+    "userId": "CT-003-CHIDI",
+    "profileName": "Chidi 'Old School' Okafor",
+    "archetype": "The Action Buff",
+    "stats": { "reviews": 15, "avgRating": 4.8, "since": 2015 },
+    "voiceSnippet": "Give me explosions, give me high stakes, and give me a hero I can root for!"
+  }
+]
