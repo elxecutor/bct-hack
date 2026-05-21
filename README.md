@@ -49,7 +49,7 @@ Copy `.env.example` to `.env` and fill the values:
 
 ```
 GROQ_API_KEY=your_groq_api_key_here
-GROQ_MODEL_NAME=mixtral-8x7b-32768
+GROQ_MODEL_NAME=llama-3.1-8b-instant
 DATA_PATH=data/movies_sample.csv
 ```
 
@@ -82,3 +82,17 @@ docker run -p 8000:8000 --env-file .env -v ./data:/app/data bct_agent_api
 
 - Health check: `curl http://127.0.0.1:8000/` should return a status JSON.
 - OpenAPI docs: `http://127.0.0.1:8000/docs` for interactive testing.
+
+## 📊 Automated Live Endpoint Evaluation
+
+To verify the system performance metrics directly across the active FastAPI HTTP endpoints, execute:
+
+```bash
+# Benchmark Task A (RMSE and Token Overlap)
+python run_task_a_evaluation_api.py
+
+# Benchmark Task B (NDCG@10 and Hit Rate@10)
+python run_task_b_evaluation_api.py
+```
+
+Evaluation metrics will be written out cleanly to `task_a_endpoint_evaluation_metrics.csv` and `task_b_endpoint_evaluation_metrics.csv` respectively.

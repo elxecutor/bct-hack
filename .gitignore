@@ -216,3 +216,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-generated artifacts
+sol.aux
+sol.log
+sol.out
+sol.pdf
+sol.toc
+sol.tex
+texput.log
+task_a_output.json
+task_b_output.json
+task_a_endpoint_evaluation_metrics.csv
+task_b_endpoint_evaluation_metrics.csv
+task_b_evaluation_metrics.csv

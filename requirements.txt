@@ -6,3 +6,4 @@ scikit-learn
 groq
 python-dotenv
 pydantic
+requests

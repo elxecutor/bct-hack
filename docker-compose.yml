@@ -9,6 +9,4 @@ services:
     env_file:
       - .env
     volumes:
-      # This maps your local data folder to the container's data folder
-      # so the container can access movies_sample.csv
       - ./data:/app/data
