@@ -1,6 +1,7 @@
 import os
 from typing import List, Optional
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
@@ -24,15 +25,52 @@ app = FastAPI(
     description="Containerized API service serving Task A and Task B."
 )
 
+# --- CORS CONFIGURATION ---
+# Allow requests from frontend running on different ports/origins
+ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "http://0.0.0.0:3000",
+    "http://frontend:3000",  # Docker container name
+    "http://localhost:3000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # 2. Resolve data pathway safely
-DATA_PATH = os.getenv("DATA_PATH", "data/movies_sample.csv")
+# Handle both running from backend/ and project root
+DEFAULT_DATA_PATH = "data/movies_sample.csv"
+BACKEND_DATA_PATH = os.path.join(os.path.dirname(__file__), "..", DEFAULT_DATA_PATH)
+
+DATA_PATH = os.getenv("DATA_PATH", None)
+if not DATA_PATH:
+    # Try relative to backend first, then project root
+    if os.path.exists(BACKEND_DATA_PATH):
+        DATA_PATH = BACKEND_DATA_PATH
+    else:
+        DATA_PATH = DEFAULT_DATA_PATH
+
 if not os.path.exists(DATA_PATH):
-    raise RuntimeError(f"Data file not found at {DATA_PATH}. Check your .env configuration.")
+    raise RuntimeError(f"Data file not found at {DATA_PATH}. Check your .env configuration. Working directory: {os.getcwd()}")
 
 # 3. Initialize your modular business logic engines
-data_loader = MovieDataLoader(DATA_PATH)
-task_a_agent = UserSimulationAgent()
-task_b_agent = RecommendationAgent()
+try:
+    data_loader = MovieDataLoader(DATA_PATH)
+    task_a_agent = UserSimulationAgent()
+    task_b_agent = RecommendationAgent()
+    print(f"✓ Successfully initialized all agents and data loader")
+    print(f"  Data loaded from: {DATA_PATH}")
+except Exception as e:
+    print(f"✗ Failed to initialize agents: {e}")
+    raise RuntimeError(f"Agent initialization failed: {e}")
 
 
 # --- REQUEST & RESPONSE SCHEMAS ---
