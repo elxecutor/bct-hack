@@ -53,7 +53,8 @@ function RouteComponent() {
 
   const movieTitles = useMemo(() => Object.values(metadata), [])
   const persona = personas.find(p => p.userId === userId)
-  const userHistory = history[userId as keyof typeof history] || []
+  const backendUserId = persona?.backendUserId ?? userId
+  const userHistory = history[userId as keyof typeof history] || history[backendUserId as keyof typeof history] || []
 
   if (!persona) return <div className="p-8 text-center text-red-500">Persona Profile Not Found.</div>
 
@@ -67,7 +68,7 @@ function RouteComponent() {
     if (!selectedMovie) return
     startTransition(async () => {
       try {
-        const data = await simulateReview({ userId, productId: selectedMovie })
+        const data = await simulateReview({ userId: backendUserId, productId: selectedMovie })
         setSimulationResult(data)
       } catch (e) {
         console.error("Simulation failed", e)
@@ -80,7 +81,7 @@ function RouteComponent() {
   const handleRecommend = () => {
     startRecTransition(async () => {
       try {
-        const data = await recommendItems({ userId, conversationHistory: [] })
+        const data = await recommendItems({ userId: backendUserId, conversationHistory: [] })
         setRecommendations(data)
       } catch (e) {
         console.error("Recommendation failed", e)

@@ -1,64 +1,228 @@
 {
-  "CT-003-CHIDI": [
-    {
-      "productId": "A-201",
-      "title": "The Dark Knight",
-      "score": 5,
-      "summary": "The ultimate action movie!",
-      "text": "Omo, this is how you make a movie. The Joker was intense, but Batman's gadgets and the car chases? 10/10. No dull moment at all."
-    },
-    {
-      "productId": "N-101",
-      "title": "King of Boys",
-      "score": 5,
-      "summary": "Power and Action!",
-      "text": "Eniola Salami is a beast! The tension in this movie is better than most Hollywood films. I love a strong lead who knows how to take charge."
-    },
-    {
-      "productId": "A-202",
-      "title": "The Matrix",
-      "score": 4,
-      "summary": "Mind-bending fights",
-      "text": "The bullet-time effects are still the best ever. My only issue is the talking was a bit much, just give me more kung-fu!"
-    },
-    {
-      "productId": "N-201",
-      "title": "Brotherhood",
-      "score": 5,
-      "summary": "Top tier Nigerian Action",
-      "text": "The heist scenes were clean! It’s great to see a Nigerian movie with this much adrenaline. More of this, please!"
-    }
-  ],
   "CT-001-KUNLE": [
     {
-      "productId": "B001",
-      "title": "The Black Book",
-      "score": 5,
-      "summary": "Nollywood has arrived!",
-      "text": "The pacing was world-class. A gritty, dark story that shows we can do thrillers right."
+      "productId": "B000063W1R",
+      "title": "The Count of Monte Cristo [Region 2]",
+      "score": 4,
+      "summary": "A tale of revenge, love, adventure, and endurance",
+      "text": "I should have read the book by now! That's what I was thinking as I was halfway through this particular version--the only movie version I've seen so far. The cast is okay, though I think the woman playing Mercedes needed to do a better job of enunciating. The hellhole of the prison was portrayed effectively, and I totally understand Dantes' desire for revenge, although he does learn eventually that living just to get even is not the ideal way to live after all."
     },
     {
-      "productId": "B002",
-      "title": "Inception",
+      "productId": "B004EPYZQ2",
+      "title": "Super 8 (Two-Disc Blu-ray/DVD Combo)",
       "score": 4,
-      "summary": "Mind-blowing",
-      "text": "Deeply intellectual. Reminds me of why I love complex storytelling."
+      "summary": "Better than expected, with a lot of heart",
+      "text": "A great cast at work here in a story too intense for little kids but good for older ones. A group of middle schoolers works on a Super 8 film in the early 80s but then witnesses a train accident and finds out about an alien as well. There is some drama regarding the death of one young boy's mother at a factory and a girl whose dad worked in the same place; I will not ruin it here by telling you. But it gives the movie a lot of heart; it is not just another invader from another planet movie."
+    },
+    {
+      "productId": "B007CU8PAI",
+      "title": "2 Headed Shark Attack",
+      "score": 2,
+      "summary": "Silly and dumb, but kinda fun",
+      "text": "Bad special effects, a shark with two heads which both manage to roar while underwater, poor acting, dumb dialogue and delivery of it, and more! All very silly but worth a cheap rental just to make fun of it."
+    },
+    {
+      "productId": "6301967917",
+      "title": "Electra Glide in Blue [VHS]",
+      "score": 4,
+      "summary": "A weird slice of 1970s zeitgeist",
+      "text": "Here's an odd little movie with a languid pace and a very short officer who dreams of becoming a detective until he sees just how corrupt one can become when one has such power. You get a glimpse into the 1970s system vs. the common man theme here, with a detective and even regular motorcycle cops being unfair to the hippies who are just zipping along the Arizona highways, for the most part. Tragedies ensue as Robert Blake and his hair-trigger partner try to chase down a criminal. Slo-mo crashes happen. The film ends on the same lonely stretch of highway we see at the start. Interesting look into the recent past."
     }
   ],
   "CT-002-SARAH": [
     {
-      "productId": "S001",
-      "title": "Interstellar",
-      "score": 5,
-      "summary": "Masterpiece",
-      "text": "The physics, the music, the emotion. This is what sci-fi should be."
+      "productId": "B000063W1R",
+      "title": "The Count of Monte Cristo [Region 2]",
+      "score": 3,
+      "summary": "Count by Numbers",
+      "text": "For all its production values and sweep this version of THE COUNT OF MONTE CRISTO remains insipid. The characters are thumbnail sketches, which lack all the depth necessary to convey the true meaning of this story. There is no sense of revenge, lost love or even enlightenment of revealed secrets. Instead of really feeling sympathy for the wronged Edmund Dantes you may actually feel disdain for his naivete. Richard Harris brings some life and period humor as Dantes' mentor and prison mate. This portion of the film is very good being well developed and structured. However, when Dantes escapes and returns as the Count it seems like the rest of the film got compressed to fit it into a pre-determined time slot."
     },
     {
-      "productId": "S002",
-      "title": "Contact",
+      "productId": "B000FVQLQQ",
+      "title": "A Beautiful Mind (Widescreen)(2001)",
+      "score": 5,
+      "summary": "Touching and Poignant and Ultimately Moving",
+      "text": "This is a truly touching film. If you are not familiar with the story I will only say that to give away any details of this movie would be inappropriate. A BEAUTIFUL MIND is slow, lethargic yet remains intriguing and emerges into a heartfelt statement about our true selves and the meaning of love, commitment and the essence of mind and being. Russell Crowe and Jennifer Connelly give brilliantly realistic performances and make this film work. A lot also has to be said of James Horner's insightful and moving score, which only enhances the viewer's insight and response to the film's statement. This film is beautiful and one of the best to come out this year."
+    },
+    {
+      "productId": "630403945X",
+      "title": "Montana [VHS]",
       "score": 4,
-      "summary": "Solid realism",
-      "text": "A bit slow but the scientific groundedness is appreciated."
+      "summary": "Solid Western from Flynn",
+      "text": "The year was 1950 and Warner Bros. was looking to recapture their glory days into the foray of very big Westerns the studio produced during the 40s. MONTANA was one of Errol Flynn's last Hollywood films. He would make his last Western for Warner Bros. that same year ROCKY MOUNTAIN, based on a little known Civil War incident and one of my favorite Flynn films. In MONTANA Flynn is a sheepman who invades cattle country in Montana controlled by cattle ranchers Alexis Smith and Douglas Kennedy. Under Ray Enright's direction and under James R. Webb, Borden Chase and Charles O'Neal's scripting it has a feel of the empire building era that was prevalent in numerous Westerns. Flynn is smooth as usual but the film's greatest asset is the colour Cinematography by Karl Freund (Academy Award Winner for THE GOOD EARTH). Composer David Buttolph (THE HORSE SOLDIERS) provided the score."
+    },
+    {
+      "productId": "B000CEXFBU",
+      "title": "The Pink Panther Strikes Again [DVD]",
+      "score": 5,
+      "summary": "Strange Brew",
+      "text": "THE PINK PANTHER STRIKES AGAIN is a bit of a dichotomy. It starts off extremely humorous with a base in some form of reality. However, as the film progresses its drifts into the world of the surreal. This film does contain some extremely good scenes but it almost comes off as a very strange dream. Herbert Lom really comes into his own in this film. He is outrageously funny and steals this film. Mancini's theme and score is once again on target and অত্যন্ত innovative. This is a fun outing in all."
+    }
+  ],
+  "CT-003-CHIDI": [
+    {
+      "productId": "0790747324",
+      "title": "The Time Machine",
+      "score": 4,
+      "summary": "Priceless",
+      "text": "This time travelling tale is getting quite old, but is still fine entertainment that will stir the imagination. Saw this movie around 40 years ago and even if some stuff is outdated, it still holds my attention."
+    },
+    {
+      "productId": "B002OHDRF2",
+      "title": "Terminator Salvation (Full-Screen Edition)",
+      "score": 4,
+      "summary": "pretty good action...",
+      "text": "I barely remember the Terminator movies, so the impact was less harmful on watching terminator salvation. I wasn't really looking for a continuation of the franchise, I just wanted to be entertained. And that's what this movie does. I found the movie had great effects, good sound and some great robots. The characters in the film were interesting and the acting was decent. I find it soo weird to see a digitized Arnold near the end...but a must for the movie. A keeper...good to watch multiple times."
+    },
+    {
+      "productId": "B00096S43A",
+      "title": "It Came From Somewhere Else [DVD]",
+      "score": 1,
+      "summary": "Ed wood films beat the crap out of this amateur stuff.",
+      "text": "I've seen bad films, but this one takes the cake, unfunny, amateurish, boring and stupid actors. Looks like they wanted to make a bad movie like they used to make in the 50's....and failed. Shot in black and white with the gore and cheap sex scene in color. Even if they were shot in 3d it would not save the film. Please give me real moviemakers and send these low grade crappy actors/directors into the sunset.... This film makes the Toxic Avenger series look good......."
+    },
+    {
+      "productId": "B004EPYZQ2",
+      "title": "Super 8 (Two-Disc Blu-ray/DVD Combo)",
+      "score": 3,
+      "summary": "Movie made for kids and then the rest...",
+      "text": "Good little monster movie. But instead of a monster movie with kids you get a kid's movie with monsters. Good for a view or two, it keeps you interested to the end. As another reviewer stated...its 75% kids and 25% monster."
+    }
+  ],
+  "CT-004-ELENA": [
+    {
+      "productId": "0790747324",
+      "title": "The Time Machine",
+      "score": 4,
+      "summary": "A Journey Through Time",
+      "text": "In 1960, filmmaker George Pal brought to fruition a visionary concept for a film based on a novel by H.G. Wells, about an inventor who builds a machine that enables him to travel through time, specifically into the future, where he learns a timeless, universal truth about the machinations of society and some of the basic tenets of human nature. 'The Time Machine,' which Pal produced and directed, stars Rod Taylor as George, the inventor/time traveler/hero, who, born into a time and world that doesn't suit him, decides to do something about it. Going into this project, George Pal had a definite vision of what he wanted to accomplish with this film, from the way the time machine itself looked, to the way he wanted to present the future of mankind and the world. And working from the intelligent, imaginative screenplay by David Duncan, he succeeded by delivering a film that has since become a classic of the Science Fiction genre. The nature of the story demands that the viewer suspend disbelief, of course, but Pal develops his story in such a plausible, straightforward manner that it is easy to do just that. He puts George on the journey of a lifetime, and he takes his audience along for the ride. He does an exquisite job of establishing the Victorian era in which the story begins, as well as the world of the Eloi and the Morlocks. The F/X he employs to convey the sense of George's movement through time-- like the swift arcing of the Sun and Moon, and the quick, subtle changes George observes-- are entirely effective. Pal obviously had a devotion to detail that pays off handsomely here. A dedicated filmmaker, he refused to settle for less than what he knew was right for his picture, and it shows. The result is a film that is entertaining, timeless and memorable."
+    },
+    {
+      "productId": "B00005952Q",
+      "title": "Little Voice (Region 2)",
+      "score": 4,
+      "summary": "Lions, Tigers and Bears? Ooooh, Yeah!",
+      "text": "An introverted young lady who cherishes her late father and keeps his memory alive through his beloved record collection is at the heart of 'Little Voice,' directed by Mark Herman. Jane Horrocks gives an amazing performance as Laura, the shy girl with, as it turns out, a very big voice and the uncanny ability to mimic Judy Garland and Marilyn Monroe, among others, to perfection. She lives with her mother, Mari (Brenda Blethyn), a vociferous floozy, in an apartment above their small record store. Laura spends an inordinate amount of time retreating from her mother to the sanctuary of her bedroom and her dad's records, where she immerses herself into the music, as well as the persona, of whichever artist she is listening to at the time."
+    },
+    {
+      "productId": "B000CEXFBU",
+      "title": "The Pink Panther Strikes Again [DVD]",
+      "score": 5,
+      "summary": "The funniest \"Panther\"",
+      "text": "The inimitable Peter Sellers strikes again as Chief Inspector Jacques Clouseau, in this fourth installment of the classic 'Pink Panther' series, 'The Pink Panther Strikes Again,' directed by Blake Edwards. Given the fact that the assessment of comedy is intrinsically subjective, this film is arguably laugh for laugh and sight gag for sight gag the funniest of the five. This was the film in which Edwards and his stars honed to perfection their foolproof formula for laughs. A funny movie that showcases one of Cinema's truly unique and funny actors, 'The Pink Panther Strikes Again' is a side-splitting, fun movie you can watch over and over and never grow tired of."
+    },
+    {
+      "productId": "B001AQT0VI",
+      "title": "Home Alone (Family Fun Edition) [Blu-ray]",
+      "score": 3,
+      "summary": "Sometimes You Have To Ask Yourself A Question...",
+      "text": "Take a cheeky eight-year-old, put him in a situation he has to slapstick his way out of with the kind of antics most cartoon characters wouldn't survive, and what you have is one of the most wildly popular, commercially successful comedies of all time. And when it's over, though most likely you'll have had a good time, you'll be tempted to ask the question: Why? Because 'Home Alone,' directed by Chris Columbus and written by John Hughes, is mediocre at best, though it does have its moments."
+    }
+  ],
+  "CT-005-TUNDE": [
+    {
+      "productId": "B002OHDRF2",
+      "title": "Terminator Salvation (Full-Screen Edition)",
+      "score": 1,
+      "summary": "Was This Supposed to be \"The Transformers Got Lost in Time?\"",
+      "text": "First off, I can't say Sam Worthington represented a big shock when it turned out he was a Terminator. I mean, they made him up to look like the offspring of a marriage between the original two terminators! They might as well have hung a sign on him! This film is the silliest and most muddled thing I have ever seen. I call this kind of garbage a 'gelquel', because it isn't prequel and it isn't sequel except in actual time."
+    },
+    {
+      "productId": "6300147967",
+      "title": "Saving Grace [VHS]",
+      "score": 3,
+      "summary": "Viva il Papa-smear",
+      "text": "SAVING GRACE (Dir. Robert M. Young, Writ. Richard Cramer after Celia Gittelson's novel, 1986, 112 minutes). OK, my review title is a cheap shot. Let me explain: this excellent film came on the heels of the death of Pope John Paul I in 1978. It wasn't until the early 1980s that the smear campaign story got out. Here, at least, there is a sane approach to the life we suppose the pope lives at the Vatican."
+    },
+    {
+      "productId": "B000UGBOT0",
+      "title": "Manhunter",
+      "score": 4,
+      "summary": "\"Time is Love.\"",
+      "text": "Wow. Before Sir Anthony Hopkins ever slimed and purred his way onto the silver screen in SILENCE OF THE LAMBS as Hannibal Lecter, the ever more repugnant and brilliant Brian Cox played him in MANHUNTER. This 1986 offering is a treat on many levels. MANHUNTER was totally awesome and a breath of fresh air into cop films. This is the first time we see a film concentrating on the serial killer in a way so common today; it just wasn't done like that back then."
+    },
+    {
+      "productId": "B004EPYZQ2",
+      "title": "Super 8 (Two-Disc Blu-ray/DVD Combo)",
+      "score": 5,
+      "summary": "\"Production value!!\"",
+      "text": "SUPER 8 is not just your ordinary alien-monster-devours-a-town film. This has nostalgia, heart, Oscar-caliber acting and a director who has inherited the Flame from Spielberg. Charming, sweet young Joe Lamb has lost his mother in an accident. It is here the film is at its most powerful. Abrams pays deep homage to Spielberg. This goofy, 1950s-style monster flick is just the tonic we need in this frazzled era."
+    }
+  ],
+  "CT-006-MAYA": [
+    {
+      "productId": "B000UGBOT0",
+      "title": "Manhunter",
+      "score": 4,
+      "summary": "GRIM AND GRIPPING PSYCHOLOGICAL THRILLER...",
+      "text": "Based upon the wonderful, well written novel 'Red Dragon' by Thomas Harris, this is a superior and chilling thriller. Grim and gripping, it features William Peterson in the role of taciturn, retired FBI agent, Will Graham, who is called back to service in order to track down a bizarre serial killer. The movie is compelling and, at all times, gripping. This film is a taut, unnerving psychological thriller that is deftly directed by Michael Mann and accompanied by a terrific musical score used to great effect."
+    },
+    {
+      "productId": "B00005952Q",
+      "title": "Little Voice (Region 2)",
+      "score": 5,
+      "summary": "A REMARKABLE FILM...",
+      "text": "Michael Caine, Brenda Blethyn, Ewan McGregor, and Jane Horrocks give absolutely stellar performances in this wonderfully quirky film. LV is a mousy, meek, painfully shy and reclusive little thing with an itty bitty speaking voice. One day, LV is in her room singing, and Ray overhears her, but what he hears is Judy Garland. She goes on to give one of the most show stopping performances ever to grace center stage."
+    },
+    {
+      "productId": "B000FVQLQQ",
+      "title": "A Beautiful Mind (Widescreen)(2001)",
+      "score": 5,
+      "summary": "A BIRDS-EYE VIEW INTO A SCHITZOPHRENIC MIND...",
+      "text": "This is a superlative film, directed by Ron Howard, someone who is sure to be remembered as a legend in his own time for the number of high quality films that he has directed. Loosely based upon the biography of the same name by Sylvia Nasar, the world of schitzophrenia is brought to life in this film by a wonderful screenplay, deft direction, and superb acting. This film is an absolutely value laden two disc DVD."
+    },
+    {
+      "productId": "078401115X",
+      "title": "Angel Heart",
+      "score": 5,
+      "summary": "THE DEVIL MADE ME DO IT...",
+      "text": "This is an intriguing, unusual, beautifully directed, highly atmospheric film that successfully crosses any number of genre: film noir, thriller, mystery, and horror. Robert De Niro is sensational in the highly stylized role of Louis Cypher. Mickey Rourke, who is in nearly every scene in this film, shows that he has the ability to carry a movie, as he is simply terrific as the private detective who is slowly unraveling."
+    }
+  ],
+  "CT-007-CHIOMA": [
+    {
+      "productId": "B000063W1R",
+      "title": "The Count of Monte Cristo [Region 2]",
+      "score": 3,
+      "summary": "Good, but not the definitive version",
+      "text": "This version of The Count of Monte Cristo is pretty decent, for a Hollywoodized version of the classic novel. If you haven't read the novel, it's pretty exciting and keeps some of the novel's drama and suspense. James Caviezel and Guy Pearce both do great jobs portraying Counts Monte Cristo and Mondego. Some of the dialogue seems forced, especially when compared to the intricacy of the novel."
+    },
+    {
+      "productId": "B004EPYZQ2",
+      "title": "Super 8 (Two-Disc Blu-ray/DVD Combo)",
+      "score": 4,
+      "summary": "Alien meets E.T.",
+      "text": "Super 8 was billed as a tribute to movies like E.T. and the days of the child filmmaker in the late 1970s. The movie starts with a bunch of kids making amateur movies. The acting is superb and it really evokes the images I have of a young Spielberg and Lucas making movies. Overall, this is an enjoyable movie, but I think it departed a bit too much from the homage it was intended to be."
+    },
+    {
+      "productId": "B0048KQQC4",
+      "title": "Beauty & the Briefcase [Blu-ray]",
+      "score": 4,
+      "summary": "Meeting Boys in the Business world",
+      "text": "This is a Hillary Duff made-for-TV movie, so I probably didn't come into Beauty & the Briefcase with particularly high expectations. However, they were met, and even exceeded some - for a romantic comedy. Working as an investigative journalist for Cosmo, Duff joins an investment banking firm to find an eligible bachelor in New York. Fun for date nights with a significant other."
+    }
+  ],
+  "CT-008-DARIUS": [
+    {
+      "productId": "0790747324",
+      "title": "The Time Machine",
+      "score": 4,
+      "summary": "Time Machine Still Ticking",
+      "text": "After all these years, The Time Machine remains a very entertaining movie. Of the five or six films produced by George Pal, The Time Machine, which was also directed by him, along with The War of the Worlds are probably his finest films. The special effects for this film are basically simple but effective, and the movie pretty much resorts to melodramatic action for its resolution."
+    },
+    {
+      "productId": "B004EPYZQ2",
+      "title": "Super 8 (Two-Disc Blu-ray/DVD Combo)",
+      "score": 2,
+      "summary": "Warmed Over Spielberg for Kids",
+      "text": "J.J. Abrams, Super 8 unabashedly draws on Spielberg films such as E.T., Close Encounters of the Third Kind and even a little of his version of the War of the Worlds. The story is pretty contrived and the ending very predictable. It's obvious how it's going to turn out after about 45 minutes, especially with a bunch of kids leading the cast."
+    },
+    {
+      "productId": "B004AX5J5E",
+      "title": "Traffic (Special Edition Steelbook Case) (Blu-ray)",
+      "score": 5,
+      "summary": "Extremely Powerful Film with an Upsetting Conclusion",
+      "text": "When I first saw the Blu-ray version of this film I was, at first, taken somewhat aback by the amount of grain in some of the early shots. Then I chose to ignore it, turned off the lights and started the film. I was soon swept up into it due to the starkness of the photography, the finely written screenplay and the superb cast. Like Syriana, it is a singularly depressing film, but its extraordinary craftsmanship and complexity will draw you in to repeat viewings."
     }
   ]
 }

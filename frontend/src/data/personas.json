@@ -1,23 +1,66 @@
 [
   {
     "userId": "CT-001-KUNLE",
-    "profileName": "Kunle 'The Cinephile' Ade",
-    "archetype": "The Nollywood Critic",
-    "stats": { "reviews": 10, "avgRating": 4.5, "since": 2018 },
-    "voiceSnippet": "Omo, if the cinematography isn't crisp, I'm out! I love a story with depth."
+    "backendUserId": "A18758S1PUYIDT",
+    "profileName": "Kunle 'Night Drive' Ade",
+    "archetype": "The Road-Trip Thriller Fan",
+    "stats": { "reviews": 4, "avgRating": 3.5, "since": 2009 },
+    "voiceSnippet": "Omo, if it does not build tension fast, I am out."
   },
   {
     "userId": "CT-002-SARAH",
+    "backendUserId": "A7Y6AVS576M03",
     "profileName": "Sarah J. Miller",
-    "archetype": "The Sci-Fi Purist",
-    "stats": { "reviews": 12, "avgRating": 3.2, "since": 2012 },
-    "voiceSnippet": "Looking for scientific accuracy and mind-bending plots. Not a fan of clichés."
+    "archetype": "The Logic-First Sci-Fi Purist",
+    "stats": { "reviews": 4, "avgRating": 4.2, "since": 2001 },
+    "voiceSnippet": "I want smart plotting, grounded ideas, and zero cheap clichés."
   },
   {
     "userId": "CT-003-CHIDI",
-    "profileName": "Chidi 'Old School' Okafor",
-    "archetype": "The Action Buff",
-    "stats": { "reviews": 15, "avgRating": 4.8, "since": 2015 },
-    "voiceSnippet": "Give me explosions, give me high stakes, and give me a hero I can root for!"
+    "backendUserId": "A9RNMO9MUSMTJ",
+    "profileName": "Chidi 'Future Shock' Okafor",
+    "archetype": "The High-Concept Action Buff",
+    "stats": { "reviews": 4, "avgRating": 3.0, "since": 2005 },
+    "voiceSnippet": "Give me momentum, big ideas, and a payoff that lands hard."
+  },
+  {
+    "userId": "CT-004-ELENA",
+    "backendUserId": "A1J2931UBBJPXM",
+    "profileName": "Elena 'Time Capsule' Brooks",
+    "archetype": "The Retro Adventure Curator",
+    "stats": { "reviews": 4, "avgRating": 4.0, "since": 2000 },
+    "voiceSnippet": "If it has old-school charm and smart pacing, I am already in."
+  },
+  {
+    "userId": "CT-005-TUNDE",
+    "backendUserId": "A34GZPHWYPSY2T",
+    "profileName": "Tunde 'Edge Runner' Bello",
+    "archetype": "The Tension-Driven Genre Hopper",
+    "stats": { "reviews": 4, "avgRating": 3.2, "since": 2010 },
+    "voiceSnippet": "I like sharp genre bends, steady suspense, and no wasted scenes."
+  },
+  {
+    "userId": "CT-006-MAYA",
+    "backendUserId": "A1L43KWWR05PCS",
+    "profileName": "Maya 'Noir Signals' Adeyemi",
+    "archetype": "The Moody Prestige Seeker",
+    "stats": { "reviews": 4, "avgRating": 4.8, "since": 2001 },
+    "voiceSnippet": "Keep it atmospheric, character-heavy, and just a little strange."
+  },
+  {
+    "userId": "CT-007-CHIOMA",
+    "backendUserId": "AQZH7YTWQPOBE",
+    "profileName": "Chioma 'Wildcard' Eze",
+    "archetype": "The Genre-Mixing Rewatcher",
+    "stats": { "reviews": 3, "avgRating": 3.7, "since": 2010 },
+    "voiceSnippet": "I will forgive chaos if the story keeps moving and surprises me."
+  },
+  {
+    "userId": "CT-008-DARIUS",
+    "backendUserId": "A1GB0HW46Y2EB",
+    "profileName": "Darius 'Late Show' Cole",
+    "archetype": "The After-Hours Crowd Pleaser",
+    "stats": { "reviews": 3, "avgRating": 3.7, "since": 2010 },
+    "voiceSnippet": "Give me sharp hooks, brisk pacing, and a memorable last act."
   }
 ]
