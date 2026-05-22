@@ -1,107 +1,95 @@
-# bct-hack — Groq test pipeline
+# bct-hack — DSN x BCT LLM Agent Challenge 3.0
 
 ## Overview
+This repository contains Team **elxpektra**'s submission for the DSN x BCT LLM Agent Challenge. We have built a production-ready, full-stack LLM-agent system designed to model dynamic user behavior and deliver context-aware recommendations.
 
-`bct-hack` is a small FastAPI + LLM pipeline that demonstrates two tasks used in the hackathon brief:
+The system addresses the two core challenge tasks:
+- **Task A (User Modeling):** An agent that simulates a user's review and star rating for an unseen item, preserving their historical tone, rating behavior, and cultural nuances.
+- **Task B (Recommendation):** A conversational recommendation agent that uses Chain-of-Thought (CoT) reasoning to rank and recommend items tailored to the user's implicit preferences.
 
-- Task A — User Modeling: simulates a user review and rating for a target item using historical reviews.
-- Task B — Recommendation: generates contextual, chain-of-thought recommendations given a user profile and a candidate pool.
+## Architecture & Modular Design
+To ensure code reproducibility and scalability, the repository is cleanly separated into two environments:
+* `backend/`: A FastAPI application that serves the core Agentic logic. Powered by Groq (Llama-3.1-8b-instant) for high-speed, structured JSON generation. 
+* `frontend/`: A React/Vite application utilizing Tailwind and Radix UI components to provide a visual, interactive interface for the judges to explore the personas and recommendations.
 
-## Code pointers
+### Agentic Workflow Logic
+* **Task A Agent (`backend/src/task_a_agent.py`):** Uses contrastive prompt injection. It compares the target item's metadata against the user's historical likes and dislikes to prevent positivity bias. It forces the LLM to output strict JSON matching the structural habits (vocabulary size, sentiment) of the user's past reviews.
+* **Task B Agent (`backend/src/task_b_agent.py`):** Implements a "Reason Before Recommending" workflow. A semantic retrieval layer (TF-IDF) first narrows the catalog pool. The LLM then generates a CoT `reasoning` paragraph deducing the user's implicit needs before emitting the final `recommendations` array.
 
-- API entrypoint: [backend/src/main.py](backend/src/main.py)
-- Data handling: [backend/src/data_loader.py](backend/src/data_loader.py)
-- Task A agent (user simulation): [backend/src/task_a_agent.py](backend/src/task_a_agent.py)
-- Task B agent (recommendation): [backend/src/task_b_agent.py](backend/src/task_b_agent.py)
-- Example env template: [.env.example](.env.example)
-- Docker: [Dockerfile](Dockerfile), [docker-compose.yml](docker-compose.yml)
-- Backend documentation: [backend/README.md](backend/README.md)
+## Quick Start (Reproducibility)
 
-## API
+### Prerequisites
+* Docker and Docker Compose
+* A [Groq API Key](https://console.groq.com/)
 
-Two main endpoints are exposed by the FastAPI app in `backend/src/main.py`:
+### 1. Environment Setup
+Clone the repository and set up your environment variables:
+```bash
+git clone [https://github.com/elxecutor/bct-hack.git](https://github.com/elxecutor/bct-hack.git)
+cd bct-hack
+cp .env.example .env
 
-- POST `/simulate` — Task A: payload `{"userId": "<id>", "productId": "<id>"}`. Returns a simulated review and numeric rating based on the user's history.
-- POST `/recommend` — Task B: payload `{"userId": "<id>", "conversationHistory": [{"role":"user","content":"..."}] }`. Returns an object with `reasoning` (chain-of-thought) and `recommendations` array.
+```
 
-### Example curl (simulate):
+Open the `.env` file and insert your `GROQ_API_KEY`.
+
+### 2. Run via Docker (Recommended)
+
+We have containerized the entire stack for seamless evaluation.
 
 ```bash
-curl -sS -X POST http://127.0.0.1:8000/simulate \
-	-H "Content-Type: application/json" \
-	-d '{"userId":"AWPODHOB4GFWL","productId":"B004BH1TN0"}'
+docker-compose up --build
+
 ```
 
-### Example curl (recommend):
+* The **Frontend UI** will be available at: `http://localhost:3000`
+* The **Backend API** will be available at: `http://localhost:8000`
+* The **Interactive API Docs** will be available at: `http://localhost:8000/docs`
+
+### 3. Run Locally (Without Docker)
+
+**Backend:**
 
 ```bash
-curl -sS -X POST http://127.0.0.1:8000/recommend \
-	-H "Content-Type: application/json" \
-	-d '{"userId":"AWPODHOB4GFWL"}'
-```
-
-## Data
-
-The pipeline expects a CSV dataset at `backend/data/movies_sample.csv` with columns used in `backend/src/data_loader.py` (e.g. `userId`, `productId`, `title`, `description`, `score`, `time`, `categories`). `MovieDataLoader` provides `get_user_history()` and `get_movie_metadata()` and includes a lightweight TF-IDF semantic search helper `semantic_search()`.
-
-## Environment variables
-
-Copy `.env.example` to `.env` and fill the values:
-
-```
-GROQ_API_KEY=your_groq_api_key_here
-GROQ_MODEL_NAME=llama-3.1-8b-instant
-DATA_PATH=backend/data/movies_sample.csv
-```
-
-## Local dev (no Docker)
-
-1. Create and activate a venv:
-
-```bash
-python3 -m venv .venv
+cd backend
+python -m venv .venv
 source .venv/bin/activate
+pip install -r requirements.txt
+python -m uvicorn src.main:app --host 0.0.0.0 --port 8000
+
 ```
 
-2. Install dependencies and run:
+**Frontend:**
 
 ```bash
-pip install -r backend/requirements.txt
-python -m uvicorn backend.src.main:app --host 0.0.0.0 --port 8000
+cd frontend
+npm install
+npm run dev
+
 ```
 
-## Docker
+## API Endpoints
 
-Standard build & run (preferred for distribution):
+The system exposes two primary endpoints for automated evaluation.
+
+### Task A: `/simulate`
+
+Simulates a review and rating for an unseen item.
 
 ```bash
-docker build -t bct_agent_api .
-docker run -p 8000:8000 --env-file .env -v ./backend/data:/app/data bct_agent_api
+curl -X POST http://localhost:8000/simulate \
+  -H "Content-Type: application/json" \
+  -d '{"userId":"A1Q6QSDVNK3L7M","productId":"B002OHDRF2"}'
+
 ```
 
-## Testing & verification
+### Task B: `/recommend`
 
-- Health check: `curl http://127.0.0.1:8000/` should return a status JSON.
-- OpenAPI docs: `http://127.0.0.1:8000/docs` for interactive testing.
-
-## 📊 Automated Live Endpoint Evaluation
-
-To verify the system performance metrics directly across the active FastAPI HTTP endpoints, execute from the `backend/evaluations` directory:
+Generates ranked recommendations based on user history.
 
 ```bash
-cd backend/evaluations
+curl -X POST http://localhost:8000/recommend \
+  -H "Content-Type: application/json" \
+  -d '{"userId":"A20KRG6P6HCSB1"}'
 
-# Benchmark Task A (RMSE and Token Overlap)
-python run_task_a_evaluation_api.py
-
-# Benchmark Task B (NDCG@10 and Hit Rate@10)
-python run_task_b_evaluation_api.py
 ```
-
-Or run all evaluations at once using the helper script:
-
-```bash
-bash backend/evaluations/run_evaluations.sh
-```
-
-Evaluation metrics will be written out cleanly to `task_a_endpoint_evaluation_metrics.csv` and `task_b_endpoint_evaluation_metrics.csv` respectively.
