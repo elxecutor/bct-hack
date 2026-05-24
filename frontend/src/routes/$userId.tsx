@@ -222,7 +222,7 @@ function RouteComponent() {
                       </div>
                       <div>
                         <h4 className="text-2xl font-black italic mb-3 leading-tight">"{simulationResult.summary}"</h4>
-                        <p className="text-lg leading-relaxed text-foreground/90 font-medium font-serif">
+                        <p className="text-lg leading-relaxed text-foreground/90 font-medium">
                           {simulationResult.text}
                         </p>
                       </div>

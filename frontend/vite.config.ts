@@ -7,7 +7,16 @@ import tailwindcss from "@tailwindcss/vite"
 import { nitro } from "nitro/vite"
 
 const config = defineConfig({
-  envDir: "..",
+  server: {
+    port: 3000,
+    proxy: {
+      "/api": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
   plugins: [
     devtools(),
     nitro(),
@@ -19,9 +28,6 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
-  server: {
-    port: 3000,
-  },
 })
 
 export default config
