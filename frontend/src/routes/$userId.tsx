@@ -28,11 +28,11 @@ import {
 } from '@phosphor-icons/react'
 
 import { recommendItems, simulateReview } from "@/lib/api"
+import { getProductIdByTitle, getUnwatchedMovieOptions } from "@/lib/movies"
 
 // Local Data Imports
 import personas from "../data/personas.json"
 import history from "../data/history.json"
-import metadata from "../data/movies_metadata.json"
 import { toast } from 'sonner'
 
 export const Route = createFileRoute('/$userId')({
@@ -42,6 +42,8 @@ export const Route = createFileRoute('/$userId')({
 function RouteComponent() {
   const { userId } = Route.useParams()
   const [selectedMovie, setSelectedMovie] = useState<string | null>(null)
+  const persona = personas.find(p => p.userId === userId)
+  const backendUserId = persona?.backendUserId ?? userId
 
   // States for Task A (Simulation)
   const [isPending, startTransition] = useTransition()
@@ -51,16 +53,14 @@ function RouteComponent() {
   const [isRecPending, startRecTransition] = useTransition()
   const [recommendations, setRecommendations] = useState<{ reasoning: string, recommendations: any[] } | null>(null)
 
-  const movieTitles = useMemo(() => Object.values(metadata), [])
-  const persona = personas.find(p => p.userId === userId)
-  const backendUserId = persona?.backendUserId ?? userId
+  const movieTitles = useMemo(() => getUnwatchedMovieOptions(backendUserId).map((movie) => movie.title), [backendUserId])
   const userHistory = history[userId as keyof typeof history] || history[backendUserId as keyof typeof history] || []
 
   if (!persona) return <div className="p-8 text-center text-red-500">Persona Profile Not Found.</div>
 
   const handleSelect = (title: string) => {
-    const entry = Object.entries(metadata).find(([_, v]) => v === title)
-    if (entry) setSelectedMovie(entry[0])
+    const productId = getProductIdByTitle(title)
+    if (productId) setSelectedMovie(productId)
   }
 
   // TASK A: Run Simulation
